@@ -4,33 +4,33 @@
     <div class="nav_menu w">
       <div class="menu_item">
         <div class="home">add</div>
-          <div class="web_home">add user</div>
+        <router-link tag="span" to="addUser"><div class="web_home">add user</div></router-link>
       </div>
       <div class="menu_item">
         <div class="home">delete</div>
-          <div class="web_home">delete user</div>
+        <router-link to="deleteUser" tag="span"><div class="web_home">delete user </div></router-link>
       </div>
       <div class="menu_item">
         <div class="home">edit</div>
-          <div class="web_home">edit userById</div>
-      </div>
+        <router-link to="editUser" tag="span"><div class="web_home">edit userById</div></router-link>
+    </div>
       <div class="menu_item">
         <div class="home">find</div>
-          <div class="web_home">find userById</div>
+        <router-link to="findUser" tag="span"><div class="web_home">
+            find userById</div></router-link>
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'nav'
+  name: 'naver'
 }
 </script>
 
 <style scoped>
 h1 {
   display: flex;
-  color: white;
   margin-top: 2em;
   justify-content: space-around;
   align-items: center;

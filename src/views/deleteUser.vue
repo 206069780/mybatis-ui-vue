@@ -1,13 +1,12 @@
 <template>
-<div>
-  <div class="left"></div>
-  <div class="right"></div>
-</div>
+  <div>
+    deleteUser
+  </div>
 </template>
 
 <script>
 export default {
-  name: "body"
+  name: "deleteUser"
 }
 </script>
 

@@ -1,18 +1,16 @@
 <template>
-<div class="app">
-  <Header></Header>
+<div class="container-md">
+  <Naver></Naver>
+  <router-view></router-view>
 </div>
 </template>
-
 <script>
-import Header from "@/components/header";
+import Naver from "@/components/header";
 export default {
-  components: {Header}
+  components: {Naver}
 }
 </script>
 
 <style>
-body{
-  background: #2e2c2c;
-}
 </style>
+
