@@ -16,29 +16,28 @@ export default {
     return {
       username: '',
       sex: '',
-      age:'',
-      UserObject:''
+      age: '',
+      UserObject: ''
     }
   },
-  methods:{
-    createUserObject(){
- /*     let postData = qs.stringify({
-          username:this.username,
-          sex:this.sex,
-          age:this.age
-    })*/
-
-      let json = "username="+this.username+"&sex="+this.sex+"&age="+this.age
-      console.log(json)
-      axios.post(
-          "http://127.0.01:8081/user/save",
-          json
-      ).then(response=>{
-        console.log(response);
-      }).catch(e=>{
-       alert("hello")
-        console.log(e)
-      })
+  methods: {
+    createUserObject() {
+      const jsonStr = JSON.stringify({username: this.username ,age:this.age ,sex: this.age});
+      console.log(jsonStr);
+          axios.post(
+              "http://127.0.01:8081/user/save",
+              jsonStr,
+              {
+                headers: {
+                  'Content-Type': 'application/json'
+                }
+              }
+          ).then(response => {
+            console.log(response)
+          }).catch(e => {
+            alert(e)
+            console.log(e)
+          });
 
     }
   }

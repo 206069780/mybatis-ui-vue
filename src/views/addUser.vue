@@ -28,7 +28,6 @@ import axios from "axios";
 
 export default {
   name: "addUser",
-  props: ["id"],
   data(){
     return{
       dataList:[]
